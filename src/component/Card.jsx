@@ -11,7 +11,7 @@ const Card = () => {
             {data && data.map((elem, index) => (
                 <div 
                     key={index} 
-                    className="border p-4 h-60 w-sm sm:h-60 sm:w-sm md:h-70 md:w-sm lg:h-60 w-sm rounded flex"
+                    className="border p-4 h-60 sm:h-60 sm:w-sm md:h-70 md:w-sm lg:h-60 w-sm rounded flex"
                 >
                     <div className='w-full'>
                         <img className='h-50 object-cover' src={elem.images[0]} alt="" />
