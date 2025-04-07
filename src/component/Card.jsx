@@ -6,14 +6,14 @@ import { addCart } from '../store/cartSlice';
 
 const Card = () => {
     const { data, loading } = useData();
-    
+
     const dispatch = useDispatch()
     const handleAdd = (data) => {
         dispatch(addCart(data))
     }
 
     if (loading) return <h1 className='w-full flex justify-center items-center'><LoaderCircle className='animate-spin' /></h1>;
-    
+
     return (
         <div className="flex flex-wrap items-center justify-center gap-4 drop-shadow-xl` ">
             {data && data.map((elem, index) => (

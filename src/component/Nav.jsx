@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router-dom'
 const Nav = () => {
     const [open, setOpen] = useState(false)
     const data = useSelector(state => state.cart.data)
-    const [amount, setAmount] = useState()
     const navigate = useNavigate()
     const handleCart = () => {
         navigate("/cart")
@@ -47,6 +46,7 @@ const Nav = () => {
                 <div className='h-5 w-5 bg-red-600 absolute -top-2 -right-1 rounded-full text-white flex items-center justify-center'>{data.length}</div>
                 <ShoppingBag onClick={handleCart} className='cursor-pointer' />
             </div>
+            {/* this is just a box where we can see porduct in semiview */}
             {open && <div className='right-0 top-12 absolute h-100 w-xl bg-black rounded text-white p-4'></div>}
         </div>
     )

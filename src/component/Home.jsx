@@ -5,7 +5,7 @@ import Card from './Card'
 const Home = () => {
   return (
     <div className='py-10'>
-    <Card />
+      <Card />
     </div>
   )
 }
